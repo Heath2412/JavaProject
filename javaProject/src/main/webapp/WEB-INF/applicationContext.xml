@@ -21,6 +21,6 @@
 	<mvc:annotation-driven />
 	<context:component-scan base-package="action" />
 
-	<bean name="hello" class="hello.HelloImpl"></bean>
+	<bean id="hello" name="hello" class="hello.HelloImpl"></bean>
 	
 </beans>
