@@ -26,13 +26,11 @@ public class TestAction {
 		this.hello = hello;
 	}
 	 
-	
-	@Action(value="/showTime", results={@Result(name="success", location="showTime.tiles", type="tiles")})
+	//@Action(value="/showTime", results={@Result(name="success", location="showTime.tiles", type="tiles")})
 	public String showServerTime ()
 	{
 		serverTime = SimpleDateFormat.getDateTimeInstance().format(new Date(System.currentTimeMillis()));
-		System.out.println("serverTime = " + serverTime);
-		System.out.println("Hello = " + hello.sayHello());
+		System.out.println("serverTime = " + serverTime + " " + hello.sayHello());
 		return "success";
 	}
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 10, 2013 12:48:11 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Hangsanxuat" table="hangsanxuat" catalog="dbbestbuy">
+        <id name="mahsx" type="string">
+            <column name="MAHSX" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="tenhsx" type="string">
+            <column name="TENHSX" length="50" />
+        </property>
+        <set name="sanphams" inverse="true">
+            <key>
+                <column name="HANGSX" length="20" />
+            </key>
+            <one-to-many class="pojo.Sanpham" />
+        </set>
+    </class>
+</hibernate-mapping>

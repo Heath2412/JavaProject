@@ -24,11 +24,11 @@
 	<tx:annotation-driven />  
         <mvc:annotation-driven />
         
-	<context:component-scan base-package="action, hello, Repository" />
+	<context:component-scan base-package="action, hello" />
 
 	<bean name="hello" class="hello.HelloImpl"></bean>
 	
-        <bean name="clothingRepository" class="Repository.ClothingRepository"></bean>
+        <bean name="sanphamRepository" class="repository.SanPhamRepository"></bean>
         
         <bean name="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
             <property name="configLocation" value="classpath:hibernate.cfg.xml" />

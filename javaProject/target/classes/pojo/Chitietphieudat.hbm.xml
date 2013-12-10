@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 10, 2013 12:48:11 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Chitietphieudat" table="chitietphieudat" catalog="dbbestbuy">
+        <id name="mactd" type="string">
+            <column name="MACTD" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="sanpham" class="pojo.Sanpham" fetch="select">
+            <column name="MASP" length="20" />
+        </many-to-one>
+        <many-to-one name="phieuDatHang" class="pojo.PhieuDatHang" fetch="select">
+            <column name="MAPD" length="20" />
+        </many-to-one>
+        <property name="sldat" type="java.lang.Integer">
+            <column name="SLDAT" />
+        </property>
+        <property name="ghichu" type="string">
+            <column name="GHICHU" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

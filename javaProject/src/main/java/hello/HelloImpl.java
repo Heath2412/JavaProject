@@ -1,17 +1,17 @@
 package hello;
 
-import Repository.ClothingRepository;
+import repository.SanPhamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class HelloImpl implements IHello {
     @Autowired
-    private ClothingRepository clothingRepository;
-    public void setClothingRepository(ClothingRepository clothingRepository){
-        this.clothingRepository = clothingRepository;
+    private SanPhamRepository sanphamRepository;
+    public void setClothingRepository(SanPhamRepository sanphamRepository){
+        this.sanphamRepository = sanphamRepository;
     }
     
 	public String sayHello() {
-		return "Hello the world" + clothingRepository.getAll().size();
+		return "Hello the world" + sanphamRepository.getAll().size();
 	}
 
 }

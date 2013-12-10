@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 10, 2013 12:48:11 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Thanhvien" table="thanhvien" catalog="dbbestbuy">
+        <id name="matv" type="string">
+            <column name="MATV" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="hoten" type="string">
+            <column name="HOTEN" length="100" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="30" />
+        </property>
+        <property name="zipcode" type="string">
+            <column name="ZIPCODE" length="7" />
+        </property>
+        <property name="sodienthoai" type="string">
+            <column name="SODIENTHOAI" length="16" />
+        </property>
+        <set name="phieuDatHangs" inverse="true">
+            <key>
+                <column name="NGUOIDAT" length="20" />
+            </key>
+            <one-to-many class="pojo.PhieuDatHang" />
+        </set>
+        <set name="taikhoanDangnhaps" inverse="true">
+            <key>
+                <column name="MATV" length="20" />
+            </key>
+            <one-to-many class="pojo.TaikhoanDangnhap" />
+        </set>
+    </class>
+</hibernate-mapping>

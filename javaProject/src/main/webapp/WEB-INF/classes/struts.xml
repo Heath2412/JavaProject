@@ -9,8 +9,8 @@
 	        <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
 	    </result-types> 
             
-         <!--   <action name="showTime" class="action.TestAction" method="showServerTime" >
+            <action name="showTime" class="action.TestAction" method="showServerTime" >
                 <result type="tiles">showTime.tiles</result>
-             </action>-->
+             </action>
 	</package>
 </struts>
