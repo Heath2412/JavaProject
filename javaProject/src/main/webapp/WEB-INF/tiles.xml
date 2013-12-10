@@ -5,6 +5,7 @@
 <tiles-definitions>
     <definition name="baseLayout" template="/WEB-INF/jsp/tiles/BaseLayout.jsp">
         <put-attribute name="title" value="" />
+        <put-attribute name="layoutCssJs" value="/WEB-INF/jsp/tiles/LayoutCssJs.jsp"/>
         <put-attribute name="header" value="/WEB-INF/jsp/tiles/Header.jsp" />
         <put-attribute name="body" value="" />
         <put-attribute name="footer" value="/WEB-INF/jsp/tiles/Footer.jsp" />

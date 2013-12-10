@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 9, 2013 5:11:36 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pojo.Tradinghistory" table="tradinghistory" catalog="clothingdb">
+        <id name="id" type="java.lang.Integer">
+            <column name="Id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="clothing" class="pojo.Clothing" fetch="select">
+            <column name="Clothing_Id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="account" class="pojo.Account" fetch="select">
+            <column name="Account_Id" not-null="true" />
+        </many-to-one>
+        <property name="quantity" type="int">
+            <column name="Quantity" not-null="true" />
+        </property>
+        <property name="time" type="timestamp">
+            <column name="Time" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
